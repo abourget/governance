@@ -8,7 +8,7 @@ I, {{producer}}, hereby nominate myself for consideration as an elected block pr
 
 If {{producer}} is selected to produce blocks by the eosio contract, I will sign blocks with {{producer_key}} and I hereby attest that I will keep this key secret and secure.
 
-If {{producer}} is unable to perform obligations under this contract I will resign my position by resubmitting this contract with the null producer key.
+If {{producer}} is unable to perform obligations under this contract I will resign my position by calling the `unregprod` action to such effect.
 
 I acknowledge that a block is 'objectively valid' if it conforms to the deterministic blockchain rules in force at the time of its creation, and is 'objectively invalid' if it fails to conform to those rules.
 
@@ -18,13 +18,13 @@ pre-confirming a block produced by another producer in the schedule when I find 
 confirming a block for which {{producer}} has received 2/3+ pre-confirmation messages from other producers
 
 I hereby accept liability for any and all provable damages that result from my:
-signing two different block proposals with the same timestamp with {{producer_key}}
-signing two different block proposals with the same block number with {{producer_key}}
-signing any block proposal which builds off of an objectively invalid block
-signing a pre-confirmation for an objectively invalid block
-signing a confirmation for a block for which I do not possess pre-confirmation messages from 2/3+ other producers
+a) signing two different block proposals with the same timestamp with {{producer_key}},
+b) signing two different block proposals with the same block number with {{producer_key}},
+c) signing any block proposal which builds off of an objectively invalid block,
+d) signing a pre-confirmation for an objectively invalid block,
+e) signing a confirmation for a block for which I do not possess pre-confirmation messages from 2/3+ other producers.
 
-I hereby agree that double-signing for a timestamp or block number in concert with 2 or more other producers shall automatically be deemed malicious and subject to a fine equal to the past year of compensation received and imediate disqualification from being a producer, and other damages. An exception may be made if {{producer}} can demonstrate that the double-signing occured due to a bug in the reference software; the burden of proof is on {{producer}}.
+I hereby agree that double-signing for a timestamp or block number in concert with 2 or more other producers shall automatically be deemed malicious and subject to a fine equal to the past year of compensation received and immediate disqualification from being a producer, and other damages. An exception may be made if {{producer}} can demonstrate that the double-signing occured due to a bug in the reference software; the burden of proof is on {{producer}}.
 
 I hereby agree not to interfere with the producer election process. I agree to process all producer election transactions that occur in blocks I create, to sign all objectively valid blocks I create that contain election transactions, and to sign all pre-confirmations and confirmations necessary to facilitate transfer of control to the next set of producers as determined by the system contract.
 
@@ -37,16 +37,14 @@ The community agrees to allow {{producer}} to authenticate peers as necessary to
 I agree to process transactions on a FIFO best-effort basis and to honestly bill transactions for measured execution time.
 
 I {{producer}} agree not to manipulate the contents of blocks in order to derive profit from:
-the order in which transactions are included
-the hash of the block that is produced
+a) the order in which transactions are included,
+b) the hash of the block that is produced.
 
 I, {{producer}}, hereby agree to disclose and attest under penalty of perjury all ultimate beneficial owners of my company who own more than 10% and all direct shareholders.
 
 I, {{producer}}, hereby agree to cooperate with other block producers to carry out our respective and mutual obligations under this agreement, including but not limited to maintaining network stability and a valid blockchain.
 
 I, {{producer}}, agree to maintain a website hosted at {{url}} which contains up-to-date information on all disclosures required by this contract.
-
-I, {{producer}}, agree to set {{location}} such that {{producer}} is scheduled with minimal latency between my previous and next peer.
 
 I, {{producer}}, agree to maintain time synchronization within 10 ms of global atomic clock time, using a method agreed to among producers.
 
