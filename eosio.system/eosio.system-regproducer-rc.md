@@ -13,9 +13,9 @@ If {{producer}} is unable to perform obligations under this contract I will resi
 I acknowledge that a block is 'objectively valid' if it conforms to the deterministic blockchain rules in force at the time of its creation, and is 'objectively invalid' if it fails to conform to those rules.
 
 {{producer}} hereby agrees to only use {{producer_key}} to sign messages under the following scenarios:
-proposing an objectively valid block at the time appointed by the block scheduling algorithm
-pre-confirming a block produced by another producer in the schedule when I find said block objectively valid
-confirming a block for which {{producer}} has received 2/3+ pre-confirmation messages from other producers
+a) proposing an objectively valid block at the time appointed by the block scheduling algorithm,
+b) pre-confirming a block produced by another producer in the schedule when I find said block objectively valid,
+c) confirming a block for which {{producer}} has received 2/3+ pre-confirmation messages from other producers.
 
 I hereby accept liability for any and all provable damages that result from my:
 a) signing two different block proposals with the same timestamp with {{producer_key}},
